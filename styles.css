@@ -12,3 +12,7 @@ body {
 .img-mobile {
   display: none;
 }
+
+main {
+  display: flex;
+}
