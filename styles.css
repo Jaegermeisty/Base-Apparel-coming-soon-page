@@ -56,3 +56,24 @@ p {
   width: 400px;
   line-height: 1.5rem;
 }
+
+.input-n-button {
+  display: flex;
+}
+
+input {
+  padding: 0.6rem 0 0.6rem 1.2rem;
+  border: 1px solid rgb(169, 169, 169);
+  border-radius: 2rem;
+  background-color: transparent;
+  width: 300px;
+}
+
+input::placeholder {
+  color: rgb(169, 169, 169);
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid hsl(0, 36%, 70%);
+}
