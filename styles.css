@@ -59,14 +59,15 @@ p {
 
 .input-n-button {
   display: flex;
+  position: relative;
 }
 
 input {
-  padding: 0.6rem 0 0.6rem 1.2rem;
+  padding: 0.8rem 0 0.8rem 1.2rem;
   border: 1px solid rgb(169, 169, 169);
   border-radius: 2rem;
   background-color: transparent;
-  width: 300px;
+  width: 350px;
 }
 
 input::placeholder {
@@ -76,4 +77,33 @@ input::placeholder {
 input:focus {
   outline: none;
   border: 1px solid hsl(0, 36%, 70%);
+}
+
+button {
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border: none;
+  padding: 0 2rem;
+  border-radius: 2.6rem;
+  overflow: hidden;
+  height: 100%; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  cursor: pointer;
+}
+
+.button-w-error-img {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  position: absolute;
+  right: 22rem;
+  top: 0;
+  height: 100%;
+  border-radius: 2rem 0 0 2rem;
+  overflow: hidden;
+}
+
+.error-img {
+  display: none;
 }
