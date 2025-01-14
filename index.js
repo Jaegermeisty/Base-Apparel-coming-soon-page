@@ -14,12 +14,15 @@ submitButton.addEventListener('click', function (event) {
     emailResponse.textContent = 'Whoops! It looks like you forgot to add your email.';
     emailInput.style.border = '1px solid hsl(354, 100%, 66%)';
     errorImg.style.display = 'inline';
+    emailResponse.style.color = 'hsl(354, 100%, 66%)';
   } else if (!emailPattern.test(emailValue)) {
     emailResponse.textContent = 'Please provide a valid email address.';
     emailInput.style.border = '1px solid hsl(354, 100%, 66%)';
     errorImg.style.display = 'inline';
+    emailResponse.style.color = 'hsl(354, 100%, 66%)';
   } else {
-    emailResponse.textContent = '';
+    emailResponse.textContent = 'You have been added to the email list!';
+    emailResponse.style.color = 'hsl(120, 100%, 40%)';
     emailInput.style.border = '0.1rem solid hsl(120, 100%, 40%)';
     emailInput.value = '';
     errorImg.style.display = 'none';
