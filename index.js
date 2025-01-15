@@ -5,9 +5,7 @@ const errorImg = document.querySelector('.error-img');
 
 const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-submitButton.addEventListener('click', function (event) {
-  event.preventDefault();
-
+function handleSubmit() {
   const emailValue = emailInput.value.trim();
 
   if (emailValue === '') {
@@ -28,4 +26,16 @@ submitButton.addEventListener('click', function (event) {
     errorImg.style.display = 'none';
   }
 
+};
+
+submitButton.addEventListener('click', function (event) {
+  event.preventDefault();
+  handleSubmit();
+});
+
+emailInput.addEventListener('keypress', function (event) {
+  if (event.key === 'Enter') {
+    event.preventDefault();
+    handleSubmit();
+  }
 });
